@@ -1,0 +1,51 @@
+body {
+    background-image: url(../images/background.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+}
+h1, a, nav {
+    opacity: 0.6;
+}
+.a {
+    color: white;
+    text-decoration: none;
+    margin-right: 2%;
+}
+.a:hover {
+    color: lightgray;
+    text-decoration: none;
+}
+.console-container {
+    font-size:3.5em;
+    text-align:center;
+    height:200px;
+    width:600px;
+    display:block;
+    color:white;
+    margin:auto;
+}
+.console-underscore {
+    display:inline-block;
+    position:relative;
+    top:-0.14em;
+    left:5px;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color:rgb(141, 138, 138) !important;
+    border-color:rgb(110, 107, 107) !important;
+}
+.b {
+    color: gray;
+    border-color:gray;
+}
+.b:hover {
+    color: whitesmoke;
+}
+.muted {
+    color: gray;
+}
