@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Sorting Algorithms Visualization{% endblock %}
+{% block body %}
+    <style>
+        button {
+            margin: 1%;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <h1 style="color: white;">
+        <center>Sorting Algorithms Visualization</center>
+    </h1>
+    <center>
+    <span class="text-muted">Warning: Sorting may not work on a slow PC</span>
+    <div id="container" class="chart-container" style="position: relative; height:75%; width:75%;">
+        <canvas id="chart"></canvas>
+    </div>
+    <button type="button" class="btn btn-outline-secondary" style="font-size: 1.7em;" onclick="shuffle();">Shuffle</button>
+    <button id="bubble" type="button" class="btn btn-outline-secondary" style="font-size: 1.7em;" onclick="bubbleSort();">Bubble Sort</button>
+    <button id="selection" type="button" class="btn btn-outline-secondary" style="font-size: 1.7em;" onclick="selectionSort();">Selection Sort</button>
+    <button id="insertion" type="button" class="btn btn-outline-secondary" style="font-size: 1.7em;" onclick="insertionSort();">Insertion Sort</button>
+    <script src="{{url_for('static', filename='js/sorting.js')}}"></script>
+{% endblock %}
