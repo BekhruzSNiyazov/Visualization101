@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Math Visualization and Calculator{% endblock %}
+{% block body %}
+    <style>
+        h3 {
+            color: whitesmoke;
+            margin: 2%;
+        }
+        .span {
+            color: whitesmoke;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2em;
+        }
+    </style>
+    <script src="https://unpkg.com/mathjs@9.2.0/lib/browser/math.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <center>
+        <h1 style="color: white;">
+            Math Visualization and Calculator
+        </h1>
+        <h3>Expression</h3>
+        <input style="width: 25%; text-align: center;" type="text" id="expr" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <h3 style="margin-bottom: 2%;">Result</h3>
+        <strong>
+            <span class="span" id="pretty"></span>
+            <span class="span" id="eq">=</span>
+            <span class="span" id="result"></span>
+        </strong>
+    <script src="{{url_for('static', filename='js/math.js')}}"></script>
+{% endblock %}
