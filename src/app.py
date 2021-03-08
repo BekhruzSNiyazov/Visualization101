@@ -4,6 +4,8 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+text = ""
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -16,13 +18,13 @@ def sorting():
 def code():
     return render_template("code.html")
 
-@app.route("/sound")
-def sound():
-    return render_template("sound.html")
+@app.route("/html")
+def html():
+    return render_template("html.html")
 
-@app.route("/image")
-def image():
-    return render_template("image.html")
+@app.route("/math")
+def math():
+    return render_template("math.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
