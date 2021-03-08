@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}HTML Visualization{% endblock %}
+{% block body %}
+    <center>
+    <h1 style="color: white;">
+            HTML Visualization
+    </h1>
+    <button type="button" class="btn btn-outline-secondary" style="font-size: 1.7em;">Add Button</button>
+    <div id="canvas" style="background-color: white;">
+        
+    </div>
+    <script src="{{url_for('static', filename='js/html.js')}}"></script>
+{% endblock %}
