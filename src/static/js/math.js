@@ -24,7 +24,7 @@ expr.oninput = function () {
 
         // evaluate the result of the expression
         result.innerHTML = math.format(node.compile().evaluate())
-        eq.innerHTML = "=";
+        eq.innerHTML = " = ";
     }
     catch (err) {
         result.innerHTML = "";
