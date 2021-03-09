@@ -127,7 +127,21 @@ function createCustom() {
     customT = null;
 }
 
-document.onkeydown = async function(e) {
+function download() {
+    let contents = "<!DOCTYPE html>\n<html>\n\t<head>\n\t<title></title>\n\t<style>.btn-primary, .btn-primary:hover,.btn-primary:active,.btn-primary:visited{background-color:rgb(141, 138, 138) !important;border-color:rgb(110, 107, 107) !important;}.b{color: gray;border-color:gray;}.b:hover {color: whitesmoke;}</style><link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'rel='stylesheet'integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl' crossorigin='anonymous'><script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js' integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0' crossorigin='anonymous'></script></head><body><center>" + canvas.innerHTML + "</center></body></html>";
+    var element = document.createElement("a");
+    element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(contents));
+    element.setAttribute('download', "document.html");
+
+    element.style.display = "none";
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+document.onkeydown = async function (e) {
     if (!e) e = window.event;
     var keyCode = e.code || e.key;
     if (keyCode == "Enter" && !e.shiftKey) {
