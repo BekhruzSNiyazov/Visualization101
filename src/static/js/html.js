@@ -53,23 +53,19 @@ function insertText() {
 }
 
 function setText() {
-    let last = canvas.lastElementChild;
-    last.innerHTML = inputText.value;
     let button = document.createElement("button");
     button.id = "editButton";
     button.classList = "btn btn-outline-secondary button";
     button.innerHTML = "Edit Text";
     button.onclick = editText;
     replaceElement(inputText, button);
-    inputText = null;
     editButton = button;
+    let last = canvas.lastElementChild;
+    last.innerHTML = inputText.value;
+    inputText = null;
 }
 
 function addText() {
-    let p = document.createElement("p");
-    p.innerHTML = insertTextPlaceHolder.value;
-    p.style.fontSize = "1.7em";
-    canvas.appendChild(p);
     let button = document.createElement("button");
     button.id = "insertText";
     button.classList = "btn btn-outline-secondary button";
@@ -77,6 +73,10 @@ function addText() {
     button.onclick = insertText;
     replaceElement(insertTextPlaceHolder, button);
     insertTextButton = button;
+    let p = document.createElement("p");
+    p.innerHTML = insertTextPlaceHolder.value;
+    p.style.fontSize = "1.7em";
+    canvas.appendChild(p);
     insertTextPlaceHolder = null;
 }
 
@@ -93,14 +93,15 @@ function onClick() {
 }
 
 function setOnClick() {
-    let last = canvas.lastElementChild;
-    last.onclick = new Function(textarea.value);
     let button = document.createElement("button");
     button.classList = "btn btn-outline-secondary button";
     button.onclick = onClick;
+    button.id = "onClick";
     button.innerHTML = "On Click";
     replaceElement(textarea, button);
     onClickButton = button;
+    let last = canvas.lastElementChild;
+    last.onclick = new Function(textarea.value);
     textarea = null;
 }
 
@@ -117,13 +118,14 @@ function custom() {
 }
 
 function createCustom() {
-    canvas.innerHTML += customT.value;
     let button = document.createElement("button");
     button.classList = "btn btn-outline-secondary button";
     button.onclick = custom;
+    button.id = "custom";
     button.innerHTML = "Custom";
     replaceElement(customT, button);
     customButton = button;
+    canvas.innerHTML += customT.value;
     customT = null;
 }
 
