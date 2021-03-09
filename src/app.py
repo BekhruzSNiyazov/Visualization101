@@ -26,5 +26,9 @@ def html():
 def math():
     return render_template("math.html")
 
+@app.route("/size")
+def size():
+    return render_template("size.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
