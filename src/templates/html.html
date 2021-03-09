@@ -6,17 +6,26 @@
             font-size: 1.7em;
             margin: 1%;
         }
+        #addButton, #editButton, #insertText, #insertNewLine, #onClick, #custom, #remove, #clear, #download {
+            margin-bottom: 3%;
+        }
+        .form-control {
+            width: 40% !important;
+            height: 20% !important;
+        }
     </style>
     <center>
-    <button id="addButton" type="button" class="btn btn-outline-secondary button" onclick="addButton();">Add Button</button>
-    <button id="editButton" type="button" class="btn btn-outline-secondary button" onclick="editText();">Edit Text</button>
-    <button id="insertText" type="button" class="btn btn-outline-secondary button" onclick="insertText();">Insert Text</button>
-    <button id="insertNewLine" type="button" class="btn btn-outline-secondary button" onclick="insertNewLine();">Insert New Line</button>
-    <button id="onClick" type="button" class="btn btn-outline-secondary button" onclick="onClick();">On Click</button>
-    <button id="custom" type="button" class="btn btn-outline-secondary button" onclick="custom();">Custom</button>
-    <button id="remove" type="button" class="btn btn-outline-secondary button" onclick="remove();">Remove</button>
-    <button type="button" class="btn btn-outline-secondary button" onclick="document.getElementById('canvas').innerHTML='';">Clear</button>
-    <button type="button" class="btn btn-outline-secondary button" onclick="download();">Download</button>
+    <div style="position: fixed; bottom: 0; width: 100%;" id="d">
+        <button id="addButton" type="button" class="btn btn-outline-secondary button" onclick="addButton();">Add Button</button>
+        <button id="editButton" type="button" class="btn btn-outline-secondary button" onclick="editText();">Edit Text</button>
+        <button id="insertText" type="button" class="btn btn-outline-secondary button" onclick="insertText();">Insert Text</button>
+        <button id="insertNewLine" type="button" class="btn btn-outline-secondary button" onclick="insertNewLine();">Insert New Line</button>
+        <button id="onClick" type="button" class="btn btn-outline-secondary button" onclick="onClick();">On Click</button>
+        <button id="custom" type="button" class="btn btn-outline-secondary button" onclick="custom();">Custom</button>
+        <button id="remove" type="button" class="btn btn-outline-secondary button" onclick="remove();">Remove</button>
+        <button id="clear" type="button" class="btn btn-outline-secondary button" onclick="document.getElementById('canvas').innerHTML='';">Clear</button>
+        <button id="download" type="button" class="btn btn-outline-secondary button" onclick="download();">Download</button>
+    </div>
     <div id="canvas" style="background-color: white; width: 90%; height: 60%; border-radius: 5px;"></div>
     <script src="{{url_for('static', filename='js/html.js')}}"></script>
 {% endblock %}
