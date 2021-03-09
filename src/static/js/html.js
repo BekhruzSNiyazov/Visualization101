@@ -110,7 +110,7 @@ function custom() {
     ta.style.borderRadius = "15px";
     ta.rows = 10;
     ta.classList = "form-control";
-    ta.placeholder = "Enter JavaScript Code (Shift+Enter to submit or cancel)";
+    ta.placeholder = "Enter HTML Code (Shift+Enter to submit or cancel)";
     replaceElement(customButton, ta);
     customT = ta;
     customT.focus();
