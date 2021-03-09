@@ -20,6 +20,15 @@ h1, a, nav {
     color: lightgray;
     text-decoration: none;
 }
+.aa {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+}
+.aa:hover {
+    color: lightgray;
+    text-decoration: none;
+}
 .console-container {
     font-size:3.5em;
     text-align:center;
