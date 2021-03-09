@@ -1,13 +1,21 @@
 {% extends "base.html" %}
 {% block title %}HTML Visualization{% endblock %}
 {% block body %}
+    <style>
+        .button {
+            font-size: 1.7em;
+            margin: 1%;
+        }
+    </style>
     <center>
-    <h1 style="color: white;">
-            HTML Visualization
-    </h1>
-    <button type="button" class="btn btn-outline-secondary" style="font-size: 1.7em;">Add Button</button>
-    <div id="canvas" style="background-color: white;">
-        
-    </div>
+    <button id="addButton" type="button" class="btn btn-outline-secondary button" onclick="addButton();">Add Button</button>
+    <button id="editButton" type="button" class="btn btn-outline-secondary button" onclick="editText();">Edit Text</button>
+    <button id="insertText" type="button" class="btn btn-outline-secondary button" onclick="insertText();">Insert Text</button>
+    <button id="insertNewLine" type="button" class="btn btn-outline-secondary button" onclick="insertNewLine();">Insert New Line</button>
+    <button id="onClick" type="button" class="btn btn-outline-secondary button" onclick="onClick();">On Click</button>
+    <button id="custom" type="button" class="btn btn-outline-secondary button" onclick="custom();">Custom</button>
+    <button id="remove" type="button" class="btn btn-outline-secondary button" onclick="remove();">Remove</button>
+    <button type="button" class="btn btn-outline-secondary button" onclick="document.getElementById('canvas').innerHTML='';">Clear</button>
+    <div id="canvas" style="background-color: white; width: 90%; height: 60%; border-radius: 25px;"></div>
     <script src="{{url_for('static', filename='js/html.js')}}"></script>
 {% endblock %}
