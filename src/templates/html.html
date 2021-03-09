@@ -16,6 +16,7 @@
     <button id="custom" type="button" class="btn btn-outline-secondary button" onclick="custom();">Custom</button>
     <button id="remove" type="button" class="btn btn-outline-secondary button" onclick="remove();">Remove</button>
     <button type="button" class="btn btn-outline-secondary button" onclick="document.getElementById('canvas').innerHTML='';">Clear</button>
+    <button type="button" class="btn btn-outline-secondary button" onclick="download();">Download</button>
     <div id="canvas" style="background-color: white; width: 90%; height: 60%; border-radius: 25px;"></div>
     <script src="{{url_for('static', filename='js/html.js')}}"></script>
 {% endblock %}
