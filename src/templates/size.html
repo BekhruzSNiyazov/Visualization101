@@ -2,11 +2,12 @@
 {% block title %}Size of the Planets{% endblock %}
 {% block body %}
     <center>
-        <h1 style="color: white;">Size of Planets Visualization</h1>
-        <video width="75%" height="75%" playsinline autoplay muted loop style="border-radius: 25px;">
+        <h1>Size of Planets Visualization</h1>
+        <video width="75%" height="75%" playsinline autoplay muted loop>
             <source src="https://firebasestorage.googleapis.com/v0/b/file-sharing-7dcf2.appspot.com/o/yt1s.com%20-%20Universe%20Size%20Comparison%203D_1080p.mp4?alt=media&token=41a56904-9fc2-4235-895c-fd52c4b6ecb0" type="video/mp4">
             Your browser does not support the video tag.
         </video><br>
         <a href="https://www.youtube.com/watch?v=i93Z7zljQ7I" class="a" target="_blank">Source: https://www.youtube.com/watch?v=i93Z7zljQ7I</a>
     </center>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/size.css')}}">
 {% endblock %}
