@@ -1,0 +1,22 @@
+.button {
+    font-size: 1.7em;
+    margin: 1%;
+}
+#addButton, #editButton, #insertText, #insertNewLine, #onClick, #custom, #remove, #clear, #download {
+    margin-bottom: 3%;
+}
+.form-control {
+    width: 40% !important;
+    height: 20% !important;
+}
+#buttons {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#canvas {
+    background-color: white;
+    width: 90%;
+    height: 60%;
+    border-radius: 5px;
+}
