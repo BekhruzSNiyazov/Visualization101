@@ -1,0 +1,22 @@
+#bold {
+    font-weight: bolder;
+}
+.btn {
+    font-size: 1.7em;
+}
+#items {
+    margin: 20% 7% 10% 7%;
+    background-color: rgb(30, 30, 30);
+    border-radius: 25px;
+    opacity: 0.8;
+}
+.a1 {
+    margin-left: 5%;
+}
+.muted {
+    float: right;
+    margin-right: 5%;
+}
+#toTop {
+    margin-top: -5.5%;
+}
