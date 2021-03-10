@@ -1,0 +1,22 @@
+h3 {
+    color: whitesmoke;
+    margin: 2%;
+}
+.span {
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+}
+h1 {
+    color: white;
+}
+#exp {
+    margin-top: 8%;
+}
+#expr {
+    width: 25%;
+    text-align: center;
+}
+#re {
+    margin-bottom: 2%;
+}
