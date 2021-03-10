@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block title %}About This Project{% endblock %}
 {% block body %}
-    <center style="color: white;">
-        <h1 style="margin-bottom: 5%;">About This Project</h1>
+    <center>
+        <h1>About This Project</h1>
     </center>
-    <p style="font-size: 2em; color: whitesmoke; margin: 0 7% 0 7%;">
+    <p>
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
             <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
         </svg>
@@ -17,4 +17,5 @@
         </svg>
         <strong><a class="a" href="https://github.com/BekhruzSNiyazov/Visualization-101" target="_blank">GitHub Link to Source Code</a></strong>
     </p>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
 {% endblock %}
