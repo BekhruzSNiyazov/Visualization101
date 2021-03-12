@@ -89,7 +89,6 @@ async function bubbleSort() {
     button.innerHTML = "Bubble Sort";
     button.onclick = bubbleSort;
     window.stop = false;
-    return;
 }
 
 async function selectionSort(){
@@ -120,7 +119,6 @@ async function selectionSort(){
     button.innerHTML = "Selection Sort";
     button.onclick = selectionSort;
     window.stop = false;
-    return;
 }
 
 async function insertionSort() {
@@ -151,7 +149,6 @@ async function insertionSort() {
     }
     button.innerHTML = "Insertion Sort";
     button.onclick = insertionSort;
-    return;
 }
 
 function Stop() {
