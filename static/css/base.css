@@ -14,7 +14,7 @@ h1, a, nav {
 .a {
     color: white;
     text-decoration: none;
-    margin-right: 2%;
+    margin-right: 2vw;
 }
 .a:hover {
     color: lightgray;
@@ -28,21 +28,6 @@ h1, a, nav {
 .aa:hover {
     color: lightgray;
     text-decoration: none;
-}
-.console-container {
-    font-size:3.5em;
-    text-align:center;
-    height:200px;
-    width:600px;
-    display:block;
-    color:white;
-    margin:auto;
-}
-.console-underscore {
-    display:inline-block;
-    position:relative;
-    top:-0.14em;
-    left:5px;
 }
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color:rgb(141, 138, 138) !important;
