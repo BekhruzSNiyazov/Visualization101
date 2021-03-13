@@ -57,3 +57,23 @@ h1, a, nav {
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(200, 200, 200);
 }
+#desktop {
+    display: block;
+}
+#mobile {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    #desktop {
+        display: none;
+    }
+    #mobile {
+        font-size: 200%;
+        font-weight: bolder;
+        display: block;
+        color: white;
+        text-align: center;
+        margin-top: 25vh;
+        margin-bottom: 75vh;
+    }
+}
