@@ -1,13 +1,13 @@
 .button {
-    font-size: 1.7em;
-    margin: 1%;
+    font-size: 3vh;
+    margin: 1vh;
 }
 #addButton, #editButton, #insertText, #insertNewLine, #onClick, #custom, #remove, #clear, #download {
-    margin-bottom: 3%;
+    margin-bottom: 5vh;
 }
-.form-control {
-    width: 40% !important;
-    height: 20% !important;
+textarea.form-control {
+    width: 60vw !important;
+    height: 50vh !important;
 }
 #buttons {
     position: fixed;
@@ -15,8 +15,9 @@
     width: 100%;
 }
 #canvas {
+    margin-top: 4vh;
     background-color: white;
-    width: 90%;
-    height: 60%;
-    border-radius: 5px;
+    width: 90vw;
+    height: 75vh;
+    border-radius: 20px;
 }
