@@ -33,7 +33,9 @@ function generate() {
 
         // if "if" is in line
         if (line.includes("if")) {
+            line = line.replaceAll("==", "is").slice(0, -1);
             outputCode += line;
+            outputCode += newLine;
         } else if (line.includes("for")) {
             level = line.split("    ").length-1 + line.split("\t").length-1;
             outputCode += tab.repeat(level) + "repeat ";
@@ -75,7 +77,16 @@ function generate() {
                     outputCode += newLine;
                 }
             }
-        } else {
+        } else if (line.includes("while")) {
+            line = line.replaceAll("==", "is").slice(0, -1);
+            if (line.trim() === "while True:" || line.trim() === "while 1:") {
+                alert("here");
+                line = "forever";
+            }
+            outputCode += line;
+            outputCode += newLine;
+        }
+        else {
             outputCode += line.replaceAll("\t", tab).replaceAll("    ", tab);
             outputCode += newLine;
         }
