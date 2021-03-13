@@ -3,7 +3,7 @@ h1 {
 }
 .btn {
     margin: 1%;
-    font-size: 1.7em;
+    font-size: 3vh;
 }
 #container {
     position: relative; height:75%; width:75%;
