@@ -1,6 +1,6 @@
 #output {
     font-size: 1.2em;
-    margin-right: 5%;
+    margin-right: 5vw;
     width: 40%;
     background-color: rgb(30, 30, 30);
     border-radius: 20px;
@@ -15,15 +15,16 @@ h1 {
 }
 .muted {
     font-size: large;
-    margin-bottom: 1.5%;
+    margin-bottom: 1vh;
 }
 textarea {
-    margin-left: 5%;
+    margin-left: 5vw;
     font-size: 1.2em !important;
     width: 40% !important;
     float: left;
     border-radius: 20px !important;
     font-family: monospace;
+    height: 70vh;
 }
 #bottom {
     position: fixed;
