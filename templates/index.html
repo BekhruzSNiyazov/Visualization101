@@ -1,25 +1,16 @@
 {% extends "base.html" %}
 {% block title %}Visualization 101{% endblock %}
 {% block body %}
-    {% for i in range(6) %}
-        <br>
-    {% endfor %}
-    <div class="console-container" id="bold"><span id='text'></span>
-        <div class='console-underscore' id='console'>&#95;</div>
+    <div class="console-container" id="bold"><span id="text"></span>
+        <div class="console-underscore" id="console">&#95;</div>
     </div>
-    {% for i in range(14) %}
-        <br>
-    {% endfor %}
     <center>
         <button type="button" class="btn btn-outline-secondary" class="b"
             onclick="document.getElementById('items').scrollIntoView();">Get Started</button>
     </center>
-    {% for i in range(20) %}
-        <br>
-    {% endfor %}
     <div id="items">
         <br>
-        <div style="margin: 3%; font-size: 2em;">
+        <div>
             <a class="a a1" href="/sorting">
                 <strong>
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor"
@@ -88,9 +79,6 @@
         <button type="button" class="btn btn-outline-secondary" class="b" id="toTop"
             onclick="document.getElementById('top').scrollIntoView();">Back to Top</button>
     </center>
-    {% for i in range(3) %}
-        <br>
-    {% endfor %}
     <script src="{{url_for('static', filename='js/index.js')}}"></script>
     <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
 {% endblock %}
