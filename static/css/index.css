@@ -1,22 +1,41 @@
+.console-container {
+    font-size:7vh;
+    text-align:center;
+    height:20vh;
+    width:60vw;
+    display:block;
+    color:white;
+    margin:auto;
+}
+.console-underscore {
+    display: inline-block;
+    position: relative;
+    top: -1vh;
+}
 #bold {
     font-weight: bolder;
+    margin-top: 15vh;
+    margin-bottom: 35.5vh;
 }
 .btn {
     font-size: 1.7em;
 }
 #items {
-    margin: 20% 7% 10% 7%;
+    margin: 72vh 5vw 18vh 5vw;
     background-color: rgb(30, 30, 30);
     border-radius: 25px;
     opacity: 0.8;
+    padding: 2vh 3vw 2vh 3vw;
+    font-size: 3.3vh;
 }
 .a1 {
-    margin-left: 5%;
+    margin-left: 5vw;
 }
 .muted {
     float: right;
-    margin-right: 5%;
+    margin-right: 5vw;
 }
 #toTop {
-    margin-top: -5.5%;
+    margin-top: -9vh;
+    margin-bottom: 11.5vh;
 }
