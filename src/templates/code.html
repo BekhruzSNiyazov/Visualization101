@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Code Visualization{% endblock %}
+{% block body %}
+    <center>
+        <h1>Code Visualization</h1>
+        <div class="muted">Only Python is supported</div>
+    </center>
+    <textarea id="code" class="form-control" placeholder="Paste your code here" rows="28" onkeyup="generate();"></textarea>
+    <div id="output">
+
+    </div>
+    <script src="{{url_for('static', filename='js/code.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/code.css')}}"
+{% endblock %}
