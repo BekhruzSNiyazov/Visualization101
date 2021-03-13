@@ -40,24 +40,23 @@ function generate() {
 
             // if "range" is in line
             if (line.includes("range")) {
-                pattern = new RegExp(/for\s+([\w\d_]*)\s+in\s+range/);
+                pattern = new RegExp(/for\s+([\w\d_-]*)\s+in\s+range/);
                 exec = pattern.exec(line);
-                console.log(exec);
                 varname = exec[1];
-                pattern = new RegExp(/range\s*\(\s*(\d+)\s*\)/);
+                pattern = new RegExp(/range\s*\(\s*([\d\w_-]+)\s*\)/);
                 exec = pattern.exec(line)
                 // if the string matches the regular expression
                 if (exec) {
                     outputCode += exec[1] + " times, variable: " + varname;
                     outputCode += newLine;
                 } else {
-                    pattern = new RegExp(/range\s*\(\s*(\d+)\s*,\s*(\d+)\s*\)/);
+                    pattern = new RegExp(/range\s*\(\s*([\d\w_-]+)\s*,\s*([\d\w_-]+)\s*\)/);
                     exec = pattern.exec(line);
                     if (exec) {
                         outputCode += "from " + exec[1] + " to " + exec[2] + ", variable: " + varname;
                         outputCode += newLine;
                     } else {
-                        pattern = new RegExp(/range\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(-*\d+)\s*\)/);
+                        pattern = new RegExp(/range\s*\(\s*([\d\w_-]+)\s*,\s*([\d\w_-]+)\s*,\s*([\d\w_-]+)\s*\)/);
                         exec = pattern.exec(line);
                         if (exec) {
                             outputCode += "from " + exec[1] + " to " + exec[2] + ", adding " + exec[3] +
@@ -65,6 +64,15 @@ function generate() {
                             outputCode += newLine;
                         }
                     }
+                }
+            } else {
+                outputCode += "for each element in a list ";
+                pattern = new RegExp(/for\s+([\w\W]+)\s+in\s+([\w\W]+)\s*:/);
+                exec = pattern.exec(line);
+                if (exec) {
+                    outputCode += exec[2];
+                    outputCode += ", element: " + exec[1];
+                    outputCode += newLine;
                 }
             }
         } else {
