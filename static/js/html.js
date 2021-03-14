@@ -25,6 +25,9 @@ function editText() {
     let input = document.createElement("input");
     input.style.width = "30%";
     input.style.fontSize = "1.7em";
+    input.style.position = "fixed";
+    input.style.float = "center";
+    input.style.marginBottom = "50%";
     input.classList = "form-control";
     input.placeholder = "Enter the text";
     replaceElement(editButton, input);
@@ -45,6 +48,9 @@ function insertText() {
     let input = document.createElement("input");
     input.style.width = "30%";
     input.style.fontSize = "1.7em";
+    input.style.position = "fixed";
+    input.style.float = "center";
+    input.style.marginBottom = "50%";
     input.classList = "form-control";
     input.placeholder = "Enter the text";
     replaceElement(insertTextButton, input);
@@ -84,6 +90,9 @@ function onClick() {
     let ta = document.createElement("textarea");
     ta.style.fontSize = "1.4em";
     ta.style.borderRadius = "15px";
+    ta.style.position = "fixed";
+    ta.style.float = "center";
+    ta.style.marginBottom = "50%";
     ta.rows = 10;
     ta.classList = "form-control";
     ta.placeholder = "Enter JavaScript Code (Shift+Enter to submit or cancel)";
@@ -109,6 +118,9 @@ function custom() {
     let ta = document.createElement("textarea");
     ta.style.fontSize = "1.4em";
     ta.style.borderRadius = "15px";
+    ta.style.position = "fixed";
+    ta.style.float = "center";
+    ta.style.marginBottom = "50%";
     ta.rows = 10;
     ta.classList = "form-control";
     ta.placeholder = "Enter HTML Code (Shift+Enter to submit or cancel)";
