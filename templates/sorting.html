@@ -12,10 +12,12 @@
     <div id="container" class="chart-container">
         <canvas id="chart"></canvas>
     </div>
-    <button type="button" class="btn btn-outline-secondary" onclick="shuffle();">Shuffle</button>
-    <button id="bubble" type="button" class="btn btn-outline-secondary" onclick="bubbleSort();">Bubble Sort</button>
-    <button id="selection" type="button" class="btn btn-outline-secondary" onclick="selectionSort();">Selection Sort</button>
-    <button id="insertion" type="button" class="btn btn-outline-secondary" onclick="insertionSort();">Insertion Sort</button>
+    <div id="buttons">
+        <button type="button" class="btn btn-outline-secondary" onclick="shuffle();">Shuffle</button>
+        <button id="bubble" type="button" class="btn btn-outline-secondary" onclick="bubbleSort();">Bubble Sort</button>
+        <button id="selection" type="button" class="btn btn-outline-secondary" onclick="selectionSort();">Selection Sort</button>
+        <button id="insertion" type="button" class="btn btn-outline-secondary" onclick="insertionSort();">Insertion Sort</button>
+    </div>
     <script src="{{url_for('static', filename='js/sorting.js')}}"></script>
     <link rel="stylesheet" href="{{url_for('static', filename='css/sorting.css')}}">
 {% endblock %}
