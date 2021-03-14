@@ -80,7 +80,7 @@ h1 {
         margin-bottom: 75vh;
     }
 }
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 600px) {
     #desktop {
         display: none;
     }
