@@ -11,6 +11,9 @@ body {
 h1, a, nav {
     opacity: 0.6;
 }
+h1 {
+    font-size: 4vh;
+}
 .a {
     color: white;
     text-decoration: none;
