@@ -1,5 +1,5 @@
 let canvas = document.getElementById("canvas");
-let addButtonButton = document.getElementById("addButton");
+document.getElementById("addButton");
 let editButton = document.getElementById("editButton");
 let insertTextButton = document.getElementById("insertText");
 let onClickButton = document.getElementById("onClick");
@@ -33,7 +33,7 @@ function editText() {
 }
 
 function replaceElement(element1, element2) {
-    element1.parentNode.replaceChild(element2+"\n", element1);
+    element1.parentNode.replaceChild(element2, element1);
 }
 
 function insertNewLine() {
