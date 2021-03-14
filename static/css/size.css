@@ -3,4 +3,6 @@ h1 {
 }
 video {
     border-radius: 25px;
+    width: 75vw;
+    height: 75vh;
 }
