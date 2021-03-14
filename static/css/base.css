@@ -77,3 +77,18 @@ h1, a, nav {
         margin-bottom: 75vh;
     }
 }
+@media screen and (max-height: 768px) {
+    #desktop {
+        display: none;
+    }
+    #mobile {
+        font-size: 200%;
+        font-weight: 900;
+        display: block;
+        color: white;
+        text-align: center;
+        margin-top: 25vh;
+        margin-bottom: 75vh;
+    }
+}
+
