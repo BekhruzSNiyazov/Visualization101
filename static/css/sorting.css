@@ -2,9 +2,20 @@ h1 {
     color: white;
 }
 .btn {
-    margin: 1%;
+    margin: 1vh;
     font-size: 3vh;
 }
 #container {
-    position: relative; height:75%; width:75%;
+    position: relative;
+    height: 75vh;
+    width: 75vw;
+}
+#buttons {
+    position: fixed;
+    bottom: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
