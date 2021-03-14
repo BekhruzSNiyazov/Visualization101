@@ -1,6 +1,14 @@
-var canvas = document.getElementById("chart");
+let canvas = document.getElementById("chart");
+let bubble = document.getElementById("bubble");
+let selection = document.getElementById("selection");
+let insertion = document.getElementById("insertion");
 let nums = [];
+let number;
+let temp;
+let minIdx, tempS;
+let current, j;
 window.stop = false;
+
 for (let i = 0; i < 50; i++)
 {
     nums.push(i+1);
@@ -10,7 +18,7 @@ for (let i = 0; i < 50; i++)
 {
     colors.push("rgba(200, 200, 200, 1)");
 }
-var numbers = new Chart(canvas, {
+let numbers = new Chart(canvas, {
     type: "bar",
     data: {
         labels: nums,
@@ -28,12 +36,12 @@ var numbers = new Chart(canvas, {
 });
 
 function update(nums, duration=0) {
-    var canvas = document.getElementById("chart");
+    canvas = document.getElementById("chart");
     canvas.remove();
-    var canvas = document.createElement("canvas");
+    canvas = document.createElement("canvas");
     canvas.id = "chart";
     document.getElementById("container").append(canvas);
-    var numbers = new Chart(canvas, {
+    numbers = new Chart(canvas, {
         type: "bar",
         data: {
             labels: nums,
@@ -56,20 +64,19 @@ function update(nums, duration=0) {
 
 function shuffle() {
     nums = [];
-    for (let i = 0; i < 50; i++)
-    {
-        nums.push(Math.round(Math.random() * 100));
+    while (nums.length !== 50) {
+        number = Math.round(Math.random() * 50);
+        if (!nums.includes(number)) {
+            nums.push(number);
+        }
     }
-    update(nums, 750)
+    update(nums, 750);
 }
 
 async function bubbleSort() {
-    let button = document.getElementById("bubble");
-    button.innerHTML = "Stop";
-    button.onclick = Stop;
-    let len = nums.length;
-    let temp;
-    for (let i = len-1; i>=0; i--) {
+    bubble.innerHTML = "Stop";
+    bubble.onclick = Stop;
+    for (let i = 50-1; i >= 0; i--) {
         for (let j = 1; j<=i; j++) {
             if (nums[j-1] > nums[j]) {
                 temp = nums[j-1];
@@ -86,20 +93,17 @@ async function bubbleSort() {
             break;
         }
     }
-    button.innerHTML = "Bubble Sort";
-    button.onclick = bubbleSort;
+    bubble.innerHTML = "Bubble Sort";
+    bubble.onclick = bubbleSort;
     window.stop = false;
 }
 
 async function selectionSort(){
-    let button = document.getElementById("selection");
-    button.innerHTML = "Stop";
-    button.onclick = Stop;
-    var minIdx, temp, 
-    len = nums.length;
-    for (var i = 0; i < len; i++){
+    selection.innerHTML = "Stop";
+    selection.onclick = Stop;
+    for (let i = 0; i < 50; i++){
         minIdx = i;
-        for (var  j = i+1; j<len; j++){
+        for (let j = i + 1; j < 50; j++){
             if (nums[j] < nums[minIdx]){
                 minIdx = j;
             }
@@ -107,30 +111,28 @@ async function selectionSort(){
                 break;
             }
         }
-        temp = nums[i];
+        tempS = nums[i];
         nums[i] = nums[minIdx];
-        nums[minIdx] = temp;
+        nums[minIdx] = tempS;
         update(nums);
         await new Promise(r => setTimeout(r, 10));
         if (window.stop) {
             break;
         }
     }
-    button.innerHTML = "Selection Sort";
-    button.onclick = selectionSort;
+    selection.innerHTML = "Selection Sort";
+    selection.onclick = selectionSort;
     window.stop = false;
 }
 
 async function insertionSort() {
-    let button = document.getElementById("insertion");
-    button.innerHTML = "Stop";
-    button.onclick = Stop;
-    let n = nums.length;
-    for (let i = 1; i < n; i++) {
+    insertion.innerHTML = "Stop";
+    insertion.onclick = Stop;
+    for (let i = 1; i < 50; i++) {
         // Choosing the first element in our unsorted subarray
-        let current = nums[i];
+        current = nums[i];
         // The last element of our sorted subarray
-        let j = i-1; 
+        j = i-1;
         while ((j > -1) && (current < nums[j])) {
             nums[j+1] = nums[j];
             j--;
@@ -147,8 +149,8 @@ async function insertionSort() {
         update(nums);
         await new Promise(r => setTimeout(r, 10));
     }
-    button.innerHTML = "Insertion Sort";
-    button.onclick = insertionSort;
+    insertion.innerHTML = "Insertion Sort";
+    insertion.onclick = insertionSort;
 }
 
 function Stop() {
