@@ -7,12 +7,12 @@ h1 {
 }
 #container {
     position: relative;
-    height: 60vh;
-    width: 60vw;
+    height: 65vh;
+    width: 65vw;
 }
 #buttons {
     position: fixed;
-    bottom: 10vh;
+    bottom: 7vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
