@@ -68,8 +68,6 @@ h1, a, nav {
         display: none;
     }
     #mobile {
-        font-size: 200%;
-        font-weight: bolder;
         display: block;
         color: white;
         text-align: center;
