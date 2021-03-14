@@ -7,8 +7,8 @@ h1 {
 }
 #container {
     position: relative;
-    height: 75vh;
-    width: 75vw;
+    height: 60vh;
+    width: 60vw;
 }
 #buttons {
     position: fixed;
