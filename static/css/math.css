@@ -15,9 +15,12 @@ h1 {
     margin-top: 8vh;
 }
 #expr {
-    width: 25vw;
     text-align: center;
 }
 #re {
     margin-bottom: 2vh;
+}
+#expr-div {
+    width: 30vw;
+    margin-left: 3.5vw;
 }
