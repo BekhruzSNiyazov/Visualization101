@@ -9,7 +9,10 @@
             Math Visualization and Calculator
         </h1>
         <h3 id="exp">Expression</h3>
-        <input type="text" id="expr" class="form-control" aria-describedby="inputGroup-sizing-sm">
+        <div class="input-group mb-3" id="expr-div">
+            <input type="text" id="expr" class="form-control" aria-label="Math Expression" placeholder="Math Expression">
+            <button class="btn btn-outline-secondary b" type="button" id="button-addon2" onclick="document.getElementById('expr').value = '';">Clear</button>
+        </div>
         <h3 id="re">Result</h3>
         <strong>
             <span class="span" id="pretty"></span>
