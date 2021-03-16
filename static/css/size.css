@@ -2,7 +2,6 @@ h1 {
     color: white;
 }
 video {
-    border-radius: 25px;
-    width: 75vw;
+    border-radius: 50px;
     height: 75vh;
 }
