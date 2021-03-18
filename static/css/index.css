@@ -41,7 +41,12 @@
 }
 #toTop {
     margin-top: 7vh;
-    margin-bottom: 6.25%;
+    margin-bottom: 11.1vh;
+}
+@media screen and (aspect-ratio: 16/9) {
+    #toTop {
+        margin-bottom: 4.35%;
+    }
 }
 #text {
     color: whitesmoke;
