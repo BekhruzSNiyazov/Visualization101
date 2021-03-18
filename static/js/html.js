@@ -150,6 +150,7 @@ function download() {
         .btn-primary, .btn-primary:hover,.btn-primary:active,.btn-primary:visited {
             background-color:rgb(141, 138, 138) !important;
             border-color:rgb(110, 107, 107) !important;
+            font-size: 3vh !important;
         }
         .b {
             color: gray;
@@ -160,7 +161,6 @@ function download() {
         }
         .button {
             margin: 1%;
-            font-size: 3vh;
         }
     </style>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css'rel='stylesheet'integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl' crossorigin='anonymous'>
