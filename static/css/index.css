@@ -42,12 +42,12 @@
 #toTop {
     margin-top: 7vh;
 }
-@media screen and (aspect-ratio: 16/10) {
+@media screen and (device-aspect-ratio: 16/10) {
     #toTop {
         margin-bottom: 11.1vh;
     }
 }
-@media screen and (aspect-ratio: 16/9) {
+@media screen and (device-aspect-ratio: 16/9) {
     #toTop {
         margin-bottom: 4.35%;
     }
