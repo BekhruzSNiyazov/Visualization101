@@ -41,7 +41,11 @@
 }
 #toTop {
     margin-top: 7vh;
-    margin-bottom: 11.1vh;
+}
+@media screen and (aspect-ratio: 16/10) {
+    #toTop {
+        margin-bottom: 11.1vh;
+    }
 }
 @media screen and (aspect-ratio: 16/9) {
     #toTop {
