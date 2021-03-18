@@ -25,7 +25,7 @@
     font-size: 3vh;
 }
 #items {
-    margin: 20vh 5vw 0 5vw;
+    margin: 20vmax 5vw 0 5vw;
     background-color: rgb(30, 30, 30);
     border-radius: 25px;
     opacity: 0.8;
@@ -41,7 +41,7 @@
 }
 #toTop {
     margin-top: 7vh;
-    margin-bottom: 6.25vw;
+    margin-bottom: 11vh;
 }
 #text {
     color: whitesmoke;
