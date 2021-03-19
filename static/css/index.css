@@ -1,3 +1,15 @@
+body {
+    overflow: hidden;
+}
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+.child {
+    scroll-snap-align: center;
+}
 .console-container {
     font-size:7vh;
     text-align:center;
@@ -14,7 +26,7 @@
     font-weight: bolder;
 }
 #getStarted {
-    margin-top: 5vh;
+    margin-top: 16vh;
 }
 #bold {
     font-weight: bolder;
@@ -31,6 +43,7 @@
     opacity: 0.8;
     padding: 2vh 3vw 2vh 3vw;
     font-size: 3.3vh;
+    scroll-snap-align: start;
 }
 .a1 {
     margin-left: 5vw;
