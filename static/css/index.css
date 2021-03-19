@@ -4,9 +4,11 @@
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
+
 .child {
     scroll-snap-align: center;
 }
+
 .console-container {
     font-size:7vh;
     text-align:center;
@@ -16,23 +18,28 @@
     color:white;
     margin: auto;
 }
+
 .console-underscore {
     display: inline-block;
     position: relative;
     top: -1vh;
     font-weight: bolder;
 }
+
 #getStarted {
     margin-top: 5vh;
 }
+
 #bold {
     font-weight: bolder;
     margin-top: 15vh;
     margin-bottom: 35.5vh;
 }
+
 .btn {
     font-size: 3vh;
 }
+
 #items {
     margin: 20vmax 5vw 0 5vw;
     background-color: rgb(30, 30, 30);
@@ -42,26 +49,32 @@
     font-size: 3.3vh;
     scroll-snap-align: start;
 }
+
 .a1 {
     margin-left: 5vw;
 }
+
 .muted {
     float: right;
     margin-right: 5vw;
 }
+
 #toTop {
     margin-top: 7vh;
 }
+
 @media screen and (device-aspect-ratio: 16/10) {
     #toTop {
         margin-bottom: 11.1vh;
     }
 }
+
 @media screen and (device-aspect-ratio: 16/9) {
     #toTop {
         margin-bottom: 8.7vh;
     }
 }
+
 #text {
     color: whitesmoke;
 }
