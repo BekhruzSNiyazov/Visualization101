@@ -2,25 +2,31 @@ h3 {
     color: whitesmoke;
     margin: 2vh;
 }
+
 .span {
     color: whitesmoke;
     font-family: "Times New Roman", Times, serif;
     font-size: 2em;
 }
+
 h1 {
     margin-top: 3vh;
     color: white;
     margin-bottom: 15vh;
 }
+
 #exp {
     margin-top: 8vh;
 }
+
 #expr {
     text-align: center;
 }
+
 #re {
     margin-bottom: 2vh;
 }
+
 #expr-div {
     width: 30vw;
     margin-left: 3.5vw;
