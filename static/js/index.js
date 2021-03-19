@@ -1,14 +1,14 @@
-consoleText(['Hello, User', "Enjoy using this project!"], "text");
+consoleText(["Hello, User", "Enjoy using this project!"], "text");
 
 function consoleText(words, id, colors) {
-    if (colors === undefined) colors = ['#fff'];
-    var visible = true;
-    var con = document.getElementById('console');
-    var letterCount = 1;
-    var x = 1;
-    var waiting = false;
-    var target = document.getElementById(id)
-    target.setAttribute('style', 'color:' + colors[0])
+    if (colors === undefined) colors = ["#fff"];
+    let visible = true;
+    const con = document.getElementById("console");
+    let letterCount = 1;
+    let x = 1;
+    let waiting = false;
+    const target = document.getElementById(id);
+    target.setAttribute("style", "color:" + colors[0])
     window.setInterval(function() {
         if (letterCount === 0 && waiting === false) {
         waiting = true;
