@@ -37,10 +37,10 @@ function consoleText(words, id, colors) {
     }, 120)
     window.setInterval(function() {
         if (visible === true) {
-        con.className = 'console-underscore hidden'
+        con.className = "console-underscore hidden"
         visible = false;
         } else {
-        con.className = 'console-underscore'
+        con.className = "console-underscore"
 
         visible = true;
         }
