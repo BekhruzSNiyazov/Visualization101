@@ -16,6 +16,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     color: white;
+    overflow: hidden;
 }
 h1, a, nav {
     opacity: 0.6;
