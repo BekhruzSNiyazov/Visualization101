@@ -103,3 +103,6 @@ h1 {
         margin-bottom: 75vh;
     }
 }
+::selection {
+    background: rgb(50, 50, 50);
+}
