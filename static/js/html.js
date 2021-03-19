@@ -1,5 +1,4 @@
 let canvas = document.getElementById("canvas");
-document.getElementById("addButton");
 let editButton = document.getElementById("editButton");
 let insertTextButton = document.getElementById("insertText");
 let onClickButton = document.getElementById("onClick");
@@ -89,7 +88,6 @@ function addText() {
 function onClick() {
     let ta = document.createElement("textarea");
     ta.style.fontSize = "1.4em";
-    ta.style.borderRadius = "15px";
     ta.style.position = "fixed";
     ta.style.float = "center";
     ta.style.marginBottom = "50%";
@@ -117,7 +115,6 @@ function setOnClick() {
 function custom() {
     let ta = document.createElement("textarea");
     ta.style.fontSize = "1.4em";
-    ta.style.borderRadius = "15px";
     ta.style.position = "fixed";
     ta.style.float = "center";
     ta.style.marginBottom = "50%";
