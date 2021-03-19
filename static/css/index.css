@@ -1,6 +1,3 @@
-body {
-    overflow: hidden;
-}
 .scroll-container {
     height: 100vh;
     overflow-y: scroll;
@@ -26,7 +23,7 @@ body {
     font-weight: bolder;
 }
 #getStarted {
-    margin-top: 16vh;
+    margin-top: 5vh;
 }
 #bold {
     font-weight: bolder;
