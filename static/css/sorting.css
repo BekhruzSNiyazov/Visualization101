@@ -12,8 +12,8 @@ h1 {
 }
 @media screen and (device-aspect-ratio: 16/9) {
     #container {
-        height: 70vh;
-        width: 70vw;
+        height: 65vh;
+        width: 65vw;
     }
 }
 .btn {
