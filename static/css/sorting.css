@@ -5,6 +5,16 @@ h1 {
     h1 {
         margin-top: 3vh;
     }
+    #container {
+        height: 75vh;
+        width: 75vw;
+    }
+}
+@media screen and (device-aspect-ratio: 16/9) {
+    #container {
+        height: 70vh;
+        width: 70vw;
+    }
 }
 .btn {
     margin: 1vw;
@@ -12,8 +22,6 @@ h1 {
 }
 #container {
     position: relative;
-    height: 75vh;
-    width: 75vw;
 }
 #buttons {
     position: fixed;
