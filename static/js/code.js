@@ -102,6 +102,9 @@ function generate() {
                 outputCode += ", arguments: " + exec[2];
             }
             outputCode += newLine;
+        } else if (line.includes("class")) {
+            outputCode += line.slice(0, -1);
+            outputCode += newLine;
         }
         else {
             outputCode += line.replaceAll("\t", tab).replaceAll("    ", tab).replaceAll("(", " ").replaceAll(")", " ");
