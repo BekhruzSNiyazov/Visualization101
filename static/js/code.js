@@ -13,6 +13,7 @@ function generate() {
     outputCode = "";
     output.style.padding = "0";
     output.style.overflow = "visible";
+    output.style.display = "block";
     // getting the user's input
     code = document.getElementById("code").value;
 
@@ -33,7 +34,7 @@ function generate() {
 
         // if "if" is in line
         if (line.includes("if")) {
-            line = line.replaceAll("==", "is").slice(0, -1);
+            line = line.replaceAll("==", "is").replaceAll("!=", "is not").slice(0, -1);
             outputCode += line;
             outputCode += newLine;
         } else if (line.includes("for")) {
@@ -78,7 +79,7 @@ function generate() {
                 }
             }
         } else if (line.includes("while")) {
-            line = line.replaceAll("==", "is").slice(0, -1);
+            line = line.replaceAll("==", "is").replaceAll("!=", "is not").slice(0, -1);
             let linesplttmp = line.split(" ");
             let linesplt = [];
             for (let i = 0; i < linesplttmp.length; i++) {
@@ -91,9 +92,20 @@ function generate() {
             }
             outputCode += line.replaceAll("\t", tab).replaceAll("    ", tab);
             outputCode += newLine;
+        } else if (line.includes("def")) {
+            outputCode += tab.repeat(line.replaceAll("\t", tab).replaceAll("    ", tab).split(tab).length-1);
+            outputCode += "function ";
+            pattern = new RegExp(/def\s+([\w\d_]+)\s*\(\s*([\w\W]*)\s*\)/);
+            exec = pattern.exec(line);
+            if (exec) {
+                outputCode += exec[1];
+                outputCode += ", arguments: " + exec[2];
+            }
+            outputCode += newLine;
         }
         else {
             outputCode += line.replaceAll("\t", tab).replaceAll("    ", tab).replaceAll("(", " ").replaceAll(")", " ");
+            outputCode += newLine;
         }
     }
 
@@ -105,8 +117,7 @@ function generate() {
         // showing the output to the user
         output.innerHTML = outputCode;
     }
-    if (output.innerHTML === "") {
-        output.style.padding = "0";
-        output.innerHTML = "";
+    if (output.innerHTML === "<br>") {
+        output.style.display = "none";
     }
 }
