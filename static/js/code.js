@@ -42,23 +42,23 @@ function generate() {
 
             // if "range" is in line
             if (line.includes("range")) {
-                pattern = new RegExp(/for\s+([\w\d_-]*)\s+in\s+range/);
+                pattern = new RegExp(/for\s+([\w\d_]*)\s+in\s+range/);
                 exec = pattern.exec(line);
                 varname = exec[1];
-                pattern = new RegExp(/range\s*\(\s*([\d\w_-]+)\s*\)/);
+                pattern = new RegExp(/range\s*\(\s*([\d\w_\+\-\*\/]+)\s*\)/);
                 exec = pattern.exec(line)
                 // if the string matches the regular expression
                 if (exec) {
                     outputCode += exec[1] + " times, variable: " + varname;
                     outputCode += newLine;
                 } else {
-                    pattern = new RegExp(/range\s*\(\s*([\d\w_-]+)\s*,\s*([\d\w_-]+)\s*\)/);
+                    pattern = new RegExp(/range\s*\(\s*([\d\w_\+\-\*\/]+)\s*,\s*([\d\w_\+\-\*\/]+)\s*\)/);
                     exec = pattern.exec(line);
                     if (exec) {
                         outputCode += "from " + exec[1] + " to " + exec[2] + ", variable: " + varname;
                         outputCode += newLine;
                     } else {
-                        pattern = new RegExp(/range\s*\(\s*([\d\w_-]+)\s*,\s*([\d\w_-]+)\s*,\s*([\d\w_-]+)\s*\)/);
+                        pattern = new RegExp(/range\s*\(\s*([\d\w_\+\-\*\/]+)\s*,\s*([\d\w_\+\-\*\/]+)\s*,\s*([\d\w_\+\-\*\/]+)\s*\)/);
                         exec = pattern.exec(line);
                         if (exec) {
                             outputCode += "from " + exec[1] + " to " + exec[2] + ", adding " + exec[3] +
@@ -79,16 +79,21 @@ function generate() {
             }
         } else if (line.includes("while")) {
             line = line.replaceAll("==", "is").slice(0, -1);
-            if (line.trim() === "while True:" || line.trim() === "while 1:") {
-                alert("here");
-                line = "forever";
+            let linesplttmp = line.split(" ");
+            let linesplt = [];
+            for (let i = 0; i < linesplttmp.length; i++) {
+                if (linesplttmp[i] != "") {
+                    linesplt.push(linesplttmp[i]);
+                }
             }
-            outputCode += line;
+            if (linesplt.length === 2 && (linesplt.includes("True") || linesplt.includes("1"))) {
+                line = line.replace("while True", "forever").replace("while 1", "forever");
+            }
+            outputCode += line.replaceAll("\t", tab).replaceAll("    ", tab);
             outputCode += newLine;
         }
         else {
-            outputCode += line.replaceAll("\t", tab).replaceAll("    ", tab);
-            outputCode += newLine;
+            outputCode += line.replaceAll("\t", tab).replaceAll("    ", tab).replaceAll("(", " ").replaceAll(")", " ");
         }
     }
 
@@ -99,5 +104,9 @@ function generate() {
         output.style.overflow = "scroll";
         // showing the output to the user
         output.innerHTML = outputCode;
+    }
+    if (output.innerHTML === "") {
+        output.style.padding = "0";
+        output.innerHTML = "";
     }
 }
