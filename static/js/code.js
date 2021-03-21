@@ -33,8 +33,8 @@ function generate() {
         line = lines[i];
 
         // if "if" is in line
-        if (line.includes("if")) {
-            line = line.replaceAll("==", "is").replaceAll("!=", "is not").slice(0, -1);
+        if (line.includes("if") || line.includes("else") || line.includes("elif") || line.includes("try") || line.includes("except")) {
+            line = line.replaceAll("\t", tab).replaceAll("    ", tab).replaceAll("==", "is").replaceAll("!=", "is not").slice(0, -1);
             outputCode += line;
             outputCode += newLine;
         } else if (line.includes("for")) {
@@ -99,7 +99,7 @@ function generate() {
             exec = pattern.exec(line);
             if (exec) {
                 outputCode += exec[1];
-                outputCode += ", arguments: " + exec[2];
+                outputCode += ", arguments: " + (exec[2] ? arguments !== "" : "none");
             }
             outputCode += newLine;
         } else if (line.includes("class")) {
