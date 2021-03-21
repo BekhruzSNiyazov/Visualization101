@@ -105,7 +105,7 @@ function generate() {
             exec = pattern.exec(line);
             if (exec) {
                 outputCode += exec[1];
-                outputCode += ", arguments: " + (exec[2] ? arguments !== "" : "none");
+                outputCode += ", arguments: " + (exec[2] !== "" ? exec[2] : "none");
             }
             outputCode += newLine;
         } else if (line.includes("class")) {
