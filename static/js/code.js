@@ -33,9 +33,12 @@ function generate() {
         line = lines[i];
 
         // if "if" is in line
-        if (line.includes("if") || line.includes("else") || line.includes("elif") || line.includes("try") || line.includes("except")) {
+        if (line.includes("if") || line.includes("else") || line.includes("elif")
+            || line.includes("try") || line.includes("except")) {
             let index = line.lastIndexOf(":");
-            line = line.replaceAll("\t", tab).replaceAll("    ", tab).replaceAll("==", "is").replaceAll("!=", "is not").slice(0, index);
+            if (index === -1) index = line.length;
+            line = line.replaceAll("\t", tab).replaceAll("    ", tab).replaceAll("==", "is")
+                .replaceAll("!=", "is not").slice(0, index);
             outputCode += line;
             outputCode += newLine;
         } else if (line.includes("for")) {
@@ -81,6 +84,7 @@ function generate() {
             }
         } else if (line.includes("while")) {
             let index = line.lastIndexOf(":");
+            if (index === -1) index = line.length;
             line = line.replaceAll("==", "is").replaceAll("!=", "is not").slice(0, index);
             let linesplttmp = line.split(" ");
             let linesplt = [];
@@ -106,6 +110,7 @@ function generate() {
             outputCode += newLine;
         } else if (line.includes("class")) {
             let index = line.lastIndexOf(":");
+            if (index === -1) index = line.length;
             outputCode += line.slice(0, index);
             outputCode += newLine;
         }
