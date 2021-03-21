@@ -34,7 +34,8 @@ function generate() {
 
         // if "if" is in line
         if (line.includes("if") || line.includes("else") || line.includes("elif") || line.includes("try") || line.includes("except")) {
-            line = line.replaceAll("\t", tab).replaceAll("    ", tab).replaceAll("==", "is").replaceAll("!=", "is not").slice(0, -1);
+            let index = line.lastIndexOf(":");
+            line = line.replaceAll("\t", tab).replaceAll("    ", tab).replaceAll("==", "is").replaceAll("!=", "is not").slice(0, index);
             outputCode += line;
             outputCode += newLine;
         } else if (line.includes("for")) {
@@ -79,7 +80,8 @@ function generate() {
                 }
             }
         } else if (line.includes("while")) {
-            line = line.replaceAll("==", "is").replaceAll("!=", "is not").slice(0, -1);
+            let index = line.lastIndexOf(":");
+            line = line.replaceAll("==", "is").replaceAll("!=", "is not").slice(0, index);
             let linesplttmp = line.split(" ");
             let linesplt = [];
             for (let i = 0; i < linesplttmp.length; i++) {
@@ -103,7 +105,8 @@ function generate() {
             }
             outputCode += newLine;
         } else if (line.includes("class")) {
-            outputCode += line.slice(0, -1);
+            let index = line.lastIndexOf(":");
+            outputCode += line.slice(0, index);
             outputCode += newLine;
         }
         else {
