@@ -31,6 +31,6 @@ h1 {
     width: 30vw;
     margin-left: 3.5vw;
 }
-::selection {
+input::selection {
     background: lightgray;
 }
