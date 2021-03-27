@@ -1,4 +1,4 @@
-<img src="static/images/favicon.ico" width="75">
+<img src="static/images/favicon.ico" width="80">
 
 # Visualization 101
 [![Line count](https://img.shields.io/tokei/lines/github/BekhruzSNiyazov/Visualization101)](https://github.com/BekhruzSNiyazov/Visualization101)
@@ -6,6 +6,7 @@
 [![License](https://img.shields.io/github/license/BekhruzSNiyazov/Visualization101?color=brightgreen)](https://github.com/BekhruzSNiyazov/Visualization101/blob/master/LICENSE)
 
 This is a visualization project created by Bekhruz Niyazov for 4th Tech With Tim Code Jam.
+
 [Link to the website](https://visualization101.herokuapp.com/)
 # Setup
 You don't need to install anything, just go to [https://visualization101.herokuapp.com](https://visualization101.herokuapp.com).
