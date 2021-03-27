@@ -1,9 +1,15 @@
 #header {
     font-size: 3vh;
+    margin-left: 2vw;
+    margin-right: 5vw;
 }
 
-.headerMargin {
-    margin-left: 5vw;
+nav {
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    padding: 0.9vw;
 }
 
 #tools {
@@ -131,19 +137,13 @@ h1 {
     background: rgb(50, 50, 50);
 }
 
-@media screen and (max-width: 1400px) {
-    #margin, .headerMargin {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 800px) {
     .text {
         display: none;
     }
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1300px) {
     .title {
         display: none;
     }
@@ -152,8 +152,4 @@ h1 {
 #about {
     float: right;
     margin-top: 0.3vw;
-}
-
-#margin {
-    margin-left: 5%;
 }
