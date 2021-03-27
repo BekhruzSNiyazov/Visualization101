@@ -1,5 +1,5 @@
 # Visualization 101
-<img src="static/images/favicon.ico" width="300">
+<img src="static/images/favicon.ico" width="75">
 
 [![Line count](https://img.shields.io/tokei/lines/github/BekhruzSNiyazov/Visualization101)](https://github.com/BekhruzSNiyazov/Visualization101)
 [![Open issues](https://img.shields.io/github/issues/BekhruzSNiyazov/Visualization101)](https://github.com/BekhruzSNiyazov/Visualization101/issues)
