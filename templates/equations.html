@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Linear Equation Visualization and Calculator{% endblock %}
+{% block body %}
+    <br>
+    <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <center>
+        <h1>
+            Linear Equation Visualization and Calculator
+        </h1>
+        <div id="visualization"></div>
+        <div id="calculator">
+            <h2>Enter the coordinates</h2>
+            <div id="wrapper">
+                <div>
+                    <strong class="large">Point A</strong>
+                    <input class="form-control col" type="number" placeholder="x" id="xa">
+                    <input class="form-control col" type="number" placeholder="y" id="ya">
+                </div>
+                <div>
+                    <strong class="large">Point B</strong>
+                    <input class="form-control col" type="number" placeholder="x" id="xb">
+                    <input class="form-control col" type="number" placeholder="y" id="yb">
+                </div>
+            </div>
+            <br>
+            <br>
+            <button class="btn btn-outline-secondary" id="calculate" onclick="calculate();">Calculate Equation</button>
+            <br>
+            <br>
+            <strong class="large">Equation</strong>
+            <br>
+            <br>
+            <i id="equation">y = mx + b</i>
+        </div>
+        <div class="dropup">
+            <button class="btn btn-outline-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Tools
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" onclick="visualization();">Visualization</a></li>
+                <li><a class="dropdown-item" onclick="calculator();">Calculator</a></li>
+            </ul>
+        </div>
+    </center>
+    <script src="{{url_for('static', filename='js/equations.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/equations.css')}}">
+{% endblock %}
