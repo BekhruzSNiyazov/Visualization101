@@ -6,6 +6,7 @@
 [![License](https://img.shields.io/github/license/BekhruzSNiyazov/Visualization101?color=brightgreen)](https://github.com/BekhruzSNiyazov/Visualization101/blob/master/LICENSE)
 
 This is a visualization project created by Bekhruz Niyazov for 4th Tech With Tim Code Jam.
+[Link to the website](https://visualization101.herokuapp.com/)
 # Setup
 You don't need to install anything, just go to [https://visualization101.herokuapp.com](https://visualization101.herokuapp.com).
 
@@ -15,6 +16,6 @@ Using **Visualization101** you can do a lot of things. For example, you can visu
 
 Have fun using **Visualization101** tools!
 # Credits
-Special thanks to Peter Repiev (@Potriashka) for helping in the development of the project by providing constant feedback.
+Special thanks to Peter Repiev ([@Potriashka](https://github.com/Potriashka)) for helping in the development of the project by providing constant feedback.
 # License
 This code is licensed with MIT license
