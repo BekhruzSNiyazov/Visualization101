@@ -9,19 +9,19 @@ let yb = document.getElementById("yb");
 let visualizationDisplay = false;
 let calculatorDisplay = false;
 
-setupVisualization();
 let vis = Desmos.GraphingCalculator(visualizationDiv);
-vis.setExpression({ id: "graph1", latex: "y=x^2" });
+setupVisualization("y=x^2");
 
 function visualization() {
-    setupVisualization();
+    setupVisualization("y=x^2");
 }
 
 function calculator() {
     setupCalculator();
 }
 
-function setupVisualization() {
+function setupVisualization(latex) {
+    vis.setExpression({ id: "graph1", latex: latex });
     if (!visualizationDisplay) {
         visualizationDiv.style.display = "block";
         calculatorDiv.style.display = "none";
@@ -43,7 +43,6 @@ function calculate() {
     if (!xa.value || !xb.value || !ya.value || !yb.value) {
         alert("You must fill in all input fields!");
     } else {
-        // y = mx + b
         let by = parseInt(yb.value);
         let ay = parseInt(ya.value);
         let bx = parseInt(xb.value);
@@ -52,4 +51,8 @@ function calculate() {
         let b = ay - slope * ax;
         equation.innerText = `y = ${slope}x + ${b}`;
     }
+}
+
+function view() {
+    setupVisualization(equation.innerText);
 }
