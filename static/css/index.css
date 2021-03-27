@@ -41,12 +41,10 @@
 }
 
 #items {
-    margin: 20vmax 7vw 0 7vw;
     background-color: rgb(30, 30, 30);
     border-radius: 25px;
     opacity: 0.8;
     padding: 2vh 1vw 2vh 1vw;
-    font-size: 3vh;
     scroll-snap-align: start;
 }
 
@@ -67,11 +65,19 @@
     #toTop {
         margin-bottom: 11.1vh;
     }
+    #items {
+        margin: 20vmax 7vw 0 7vw;
+        font-size: 3vh;
+    }
 }
 
 @media screen and (device-aspect-ratio: 16/9) {
     #toTop {
         margin-bottom: 8.7vh;
+    }
+    #items {
+        margin: 20vmax 7vw -3vh 7vw;
+        font-size: 2.8vh;
     }
 }
 
