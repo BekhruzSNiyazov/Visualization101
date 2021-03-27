@@ -40,7 +40,7 @@ input {
     display: inline-flex;
 }
 
-#calculate {
+#calculate, #view {
     font-size: 2.5vh !important;
 }
 
