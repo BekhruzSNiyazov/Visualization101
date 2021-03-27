@@ -49,7 +49,12 @@ function calculate() {
         let ax = parseInt(xa.value);
         let slope = (by - ay) / (bx - ax);
         let b = ay - slope * ax;
-        equation.innerText = `y = ${slope}x + ${b}`;
+        if (b > 0)
+            equation.innerText = `y = ${slope}x + ${b}`;
+        else if (b < 0)
+            equation.innerText = `y = ${slope}x - ${-b}`;
+        else
+            equation.innerText = `y = ${slope}x`;
     }
 }
 
