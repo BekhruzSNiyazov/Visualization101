@@ -11,7 +11,7 @@ You don't need to install anything, just go to [https://visualization101.herokua
 
 However, if you want to read the source code you can git clone this repository.
 # What can you do with this project?
-Using **Visualization101** you can do a lot of things. For example, you can visualize sorting algorithms, code, math and many other things.
+With **Visualization101** you can do a lot of things. For example, you can visualize sorting algorithms, code, math and many other things.
 
 Have fun using **Visualization101** tools!
 # Credits
