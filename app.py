@@ -29,6 +29,10 @@ def math():
 def size():
     return render_template("size.html")
 
+@app.route("/equations")
+def graph():
+    return render_template("equations.html")
+
 @app.route("/about")
 def about():
     return render_template("about.html")
