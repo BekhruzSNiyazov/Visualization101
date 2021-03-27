@@ -1,0 +1,64 @@
+h1, h2 {
+    margin-top: 3vh;
+    color: white;
+    margin-bottom: 3vh;
+    opacity: 0.7;
+}
+#visualization {
+    width: 75vw;
+    height: 65vh;
+    margin-bottom: 3vh;
+}
+
+.dropup {
+    position: fixed;
+    bottom: 5vh;
+    left: 40vw;
+    right: 40vw;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+#calculator {
+    color: white;
+    opacity: 0.6;
+}
+
+input {
+    width: 75% !important;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.large {
+    font-size: 2em;
+}
+
+#wrapper {
+    display: inline-flex;
+}
+
+#calculate {
+    font-size: 2.5vh !important;
+}
+
+#equation {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::selection, a::selection {
+    background: #aac4ff;
+}
