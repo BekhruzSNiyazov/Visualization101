@@ -80,5 +80,5 @@ input[type=number] {
 }
 
 input::selection, a::selection {
-    background: #aac4ff;
+    background: lightgray;
 }
