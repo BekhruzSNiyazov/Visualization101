@@ -21,6 +21,7 @@ function calculator() {
 }
 
 function setupVisualization(latex, points) {
+    vis.setBlank();
     vis.setExpression({ id: "graph1", latex: latex });
     if (points) {
         vis.setExpression({
@@ -81,7 +82,6 @@ function calculate() {
 }
 
 function view() {
-    vis.setBlank();
     setupVisualization(equation.innerText, [[eval(xa.value), eval(ya.value)], [eval(xb.value), eval(yb.value)]]);
 }
 
