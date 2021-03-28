@@ -10,18 +10,36 @@ let visualizationDisplay = false;
 let calculatorDisplay = false;
 
 let vis = Desmos.GraphingCalculator(visualizationDiv);
-setupVisualization("y=x^2");
+setupVisualization("y=x^2", null);
 
 function visualization() {
-    setupVisualization("y=x^2");
+    setupVisualization("y=x^2", null);
 }
 
 function calculator() {
     setupCalculator();
 }
 
-function setupVisualization(latex) {
+function setupVisualization(latex, points) {
     vis.setExpression({ id: "graph1", latex: latex });
+    if (points) {
+        vis.setExpression({
+            type: "table",
+            columns: [
+                {
+                    latex: "x",
+                    values: [points[0][0], points[1][0]]
+                },
+                {
+                    latex: "y",
+                    values: [points[0][1], points[1][1]],
+                },
+            ]
+        });
+    }
+
+    points = [];
+
     if (!visualizationDisplay) {
         visualizationDiv.style.display = "block";
         calculatorDiv.style.display = "none";
@@ -43,21 +61,45 @@ function calculate() {
     if (!xa.value || !xb.value || !ya.value || !yb.value) {
         alert("You must fill in all input fields!");
     } else {
-        let by = parseInt(yb.value);
-        let ay = parseInt(ya.value);
-        let bx = parseInt(xb.value);
-        let ax = parseInt(xa.value);
+        let by = parseInt(eval(yb.value));
+        let ay = parseInt(eval(ya.value));
+        let bx = parseInt(eval(xb.value));
+        let ax = parseInt(eval(xa.value));
         let slope = (by - ay) / (bx - ax);
-        let b = ay - slope * ax;
+        if (!isInt((by - ay) / (bx - ax))) {
+            slope = reduce((by - ay), (bx - ax));
+            slope = `${slope[0]} / ${slope[1]}`;
+        }
+        let b = ay - ax * reduce((by - ay), (bx - ax))[0] / reduce((by - ay), (bx - ax))[1];
         if (b > 0)
-            equation.innerText = `y = ${slope}x + ${b}`;
+            equation.innerText = `y = ${simplify(slope)}x + ${!isInt(b) ? b.toFixed(1) : b}`;
         else if (b < 0)
-            equation.innerText = `y = ${slope}x - ${-b}`;
+            equation.innerText = `y = ${simplify(slope)}x - ${!isInt(b) ? -b.toFixed(1) : -b}`;
         else
-            equation.innerText = `y = ${slope}x`;
+            equation.innerText = `y = ${simplify(slope)}x`;
     }
 }
 
 function view() {
-    setupVisualization(equation.innerText);
+    vis.setBlank();
+    setupVisualization(equation.innerText, [[eval(xa.value), eval(ya.value)], [eval(xb.value), eval(yb.value)]]);
+}
+
+function simplify(slope) {
+    if (slope === 1)
+        return "";
+    else
+        return slope;
+}
+
+function reduce(numerator,denominator) {
+    let gcd = function gcd(a, b) {
+        return b ? gcd(b, a % b) : a;
+    };
+    gcd = gcd(numerator,denominator);
+    return [numerator/gcd, denominator/gcd];
+}
+
+function isInt(number) {
+    return parseInt(number) === number;
 }
