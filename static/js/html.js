@@ -13,6 +13,8 @@ let insertTextPlaceHolder;
 let inputText;
 let textarea;
 let customT;
+let scripts = "";
+let n = 1;
 
 function addButton() {
     let button = document.createElement("button");
@@ -115,6 +117,8 @@ function setOnClick() {
     onClickButton = button;
     let last = canvas.lastElementChild;
     last.onclick = new Function(textarea.value);
+    last.id = "button" + n;
+    scripts += `document.getElementById("${last.id}").onclick = function() {\n\t` + textarea.value + "\n}";
     textarea = null;
 }
 
@@ -171,8 +175,11 @@ function download() {
     </head>
     <body>
         <center>
-            ` + canvas.innerHTML + `
+            ${canvas.innerHTML}
         </center>
+        <script>
+            ${scripts}
+        </script>
     </body>
 </html>`;
     let element = document.createElement("a");
