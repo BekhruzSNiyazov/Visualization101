@@ -1,3 +1,9 @@
+/*
+* Back end for html.html
+* Handles:
+*   - the creation of the webpage
+ */
+
 let canvas = document.getElementById("canvas");
 let editButton = document.getElementById("editButton");
 let insertTextButton = document.getElementById("insertText");
