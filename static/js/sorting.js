@@ -1,3 +1,9 @@
+/*
+* Back end for sorting.html
+* Handles:
+*   - visualization of different sorting algorithms
+ */
+
 let canvas = document.getElementById("chart");
 let bubble = document.getElementById("bubble");
 let selection = document.getElementById("selection");
