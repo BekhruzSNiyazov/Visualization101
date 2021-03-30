@@ -76,11 +76,21 @@ function calculate() {
             slope = reduce((by - ay), (bx - ax));
             slope = `${slope[0]} / ${slope[1]}`;
         }
-        let b = ay - ax * reduce((by - ay), (bx - ax))[0] / reduce((by - ay), (bx - ax))[1];
+        let s = reduce((by - ay), (bx - ax));
+        let r = reduce(s[0], s[1])
+        let b = ay - ax * r[0] / r[1];
+        let b_display = b;
+        if (!isInt(b)) {
+            b_display = reduce(ax * r[0], r[1])
+            if (b_display[1] < 0)
+                b_display = ay + " + " + b_display[0] + " / " + -b_display[1];
+            else
+                b_display = ay + " - " + b_display[0] + " / " + b_display[1];
+        }
         if (b > 0)
-            equation.innerText = `y = ${simplify(slope)}x + ${!isInt(b) ? b.toFixed(1) : b}`;
+            equation.innerText = `y = ${simplify(slope)}x + ${b_display}`;
         else if (b < 0)
-            equation.innerText = `y = ${simplify(slope)}x - ${!isInt(b) ? -b.toFixed(1) : -b}`;
+            equation.innerText = `y = ${simplify(slope)}x - ${-b_display}`;
         else
             equation.innerText = `y = ${simplify(slope)}x`;
     }
