@@ -79,7 +79,6 @@ function calculate() {
         let s = reduce((by - ay), (bx - ax));
         let r = reduce(s[0], s[1])
         let b = ay - ax * r[0] / r[1];
-        console.log(b);
         let b_display = b;
         if (!isInt(b)) {
             b_display = reduce(ax * r[0], r[1])
@@ -88,7 +87,6 @@ function calculate() {
             else
                 b_display = ay + " - " + b_display[0] + " / " + b_display[1];
         }
-        console.log(b_display);
         if (b > 0)
             equation.innerText = `y = ${simplify(slope)}x + ${b_display}`;
         else if (b < 0)
