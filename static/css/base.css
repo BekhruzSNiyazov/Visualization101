@@ -29,6 +29,7 @@ body {
     background-repeat: no-repeat;
     color: white;
     overflow: hidden;
+    font-family: "Ubuntu" !important;
 }
 
 h1, a, nav {
