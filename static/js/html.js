@@ -194,6 +194,12 @@ function download() {
     document.body.removeChild(element);
 }
 
+function clear() {
+    document.getElementById("canvas").innerHTML = "";
+    scripts = "";
+    n = 0;
+}
+
 document.onkeydown = async function (e) {
     if (!e) e = window.event;
     let keyCode = e.code || e.key;
