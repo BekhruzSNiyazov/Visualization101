@@ -1,3 +1,9 @@
+/*
+* Back end for code.html
+* Handles:
+*   - the analysys or the code and pseudo code generation
+ */
+
 // defining the variables
 let tab = "&emsp;".repeat(3);
 let newLine = "<br>";
