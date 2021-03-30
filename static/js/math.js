@@ -1,3 +1,10 @@
+/*
+* Back end for math.html
+* Handles:
+*   - visualization of math
+*   - calculation of the answer
+ */
+
 let expr = document.getElementById('expr');
 let pretty = document.getElementById('pretty');
 let result = document.getElementById('result');
