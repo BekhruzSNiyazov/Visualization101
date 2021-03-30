@@ -1,3 +1,10 @@
+/*
+* Back end for equations.html
+* Handles:
+*   - switching between tools
+*   - linear equation calculator
+ */
+
 let visualizationDiv = document.getElementById("visualization");
 let calculatorDiv = document.getElementById("calculator");
 let equation = document.getElementById("equation");
@@ -38,8 +45,6 @@ function setupVisualization(latex, points) {
             ]
         });
     }
-
-    points = [];
 
     if (!visualizationDisplay) {
         visualizationDiv.style.display = "block";
