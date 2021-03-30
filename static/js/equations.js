@@ -17,10 +17,10 @@ let visualizationDisplay = false;
 let calculatorDisplay = false;
 
 let vis = Desmos.GraphingCalculator(visualizationDiv);
-setupVisualization("y=x^2", null);
+setupVisualization("2\\cos\\left(2x\\right)", null);
 
 function visualization() {
-    setupVisualization("y=x^2", null);
+    setupVisualization("2\\cos\\left(2x\\right)", null);
 }
 
 function calculator() {
