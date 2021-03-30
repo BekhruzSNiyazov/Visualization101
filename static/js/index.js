@@ -1,3 +1,9 @@
+/*
+* Back end for index.html
+* Handles:
+*   - the front end of index.html
+ */
+
 consoleText(["Hello, User", "Enjoy using this project!"], "text");
 
 function consoleText(words, id, colors) {
