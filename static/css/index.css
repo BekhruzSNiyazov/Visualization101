@@ -68,7 +68,7 @@
 
 @media screen and (device-aspect-ratio: 16/10) {
     #toTop {
-        margin-bottom: 11.1vh;
+        margin-bottom: 11vh;
     }
     #items {
         margin: 20vmax 8vw 0 8vw;
