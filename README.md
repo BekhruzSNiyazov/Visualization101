@@ -7,6 +7,8 @@ This is a visualization project created by Bekhruz Niyazov for 4th Tech With Tim
 
 [Link to the website](https://visualization101.herokuapp.com/)
 
+[Vote](https://twtcodejam.net/timathon/team/631/)
+
 # Setup
 You don't need to install anything, just go to [https://visualization101.herokuapp.com](https://visualization101.herokuapp.com).
 
