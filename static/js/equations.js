@@ -90,7 +90,7 @@ function calculate() {
         if (b > 0)
             equation.innerText = `y = ${simplify(slope)}x + ${b_display}`;
         else if (b < 0)
-            equation.innerText = `y = ${simplify(slope)}x - ${b_display}`;
+            equation.innerText = `y = ${simplify(slope)}x - ${-b_display}`;
         else
             equation.innerText = `y = ${simplify(slope)}x`;
     }
@@ -109,7 +109,7 @@ function simplify(slope) {
         return slope;
 }
 
-function reduce(numerator,denominator) {
+function reduce(numerator, denominator) {
     let gcd = function gcd(a, b) {
         return b ? gcd(b, a % b) : a;
     };
